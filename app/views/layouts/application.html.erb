@@ -25,9 +25,11 @@
     <%= link_to "ホーム", root_path %>
 
     <% if user_signed_in? %>
-
+    <br>
+   <%= link_to current_user.email  , users_show_path %>
+   <br>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-
+   
 
     <% else %>
 
